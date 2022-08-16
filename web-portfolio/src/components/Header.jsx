@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 // Main Imports
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
@@ -17,6 +16,9 @@ class Header extends Component {
                 </section>
                 <section>
                     <Link to="/projects">Projects</Link>
+                </section>
+                <section>
+                    <Link to="/habilities">Habilities</Link>
                 </section>
             </nav>
         </header>
