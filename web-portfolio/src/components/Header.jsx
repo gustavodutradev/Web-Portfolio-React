@@ -8,17 +8,17 @@ class Header extends Component {
     return (
         <header className="header">
             <nav className="nav-links">
-                <section>
+                <section className="link-container">
                     <Link to="/">Home</Link>
                 </section>
-                <section>
+                <section className="link-container">
                     <Link to="/about">About</Link>
                 </section>
-                <section>
-                    <Link to="/projects">Projects</Link>
+                <section className="link-container">
+                    <Link to="/skills">Skills</Link>
                 </section>
-                <section>
-                    <Link to="/habilities">Habilities</Link>
+                <section className="link-container">
+                    <Link to="/projects">Projects</Link>
                 </section>
             </nav>
         </header>

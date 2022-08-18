@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { getMyReposFromGithub } from '../api';
+import Loading from './Loading';
 
 class Projects extends Component {
 
   state = {
     reposList: [],
+    isRequisitionDone: false,
   }
 
  componentDidMount() {
@@ -12,15 +14,18 @@ class Projects extends Component {
 }
 
 getReposResponse = async () => {
+  this.setState({ reposList: [], isRequisitionDone: true });
   const repos = await getMyReposFromGithub();
-  this.setState({reposList: repos});
+  this.setState({reposList: repos, isRequisitionDone: false});
 }
 
 render() {
-  const { reposList } = this.state;
+  const { reposList, isRequisitionDone } = this.state;
     return (  
       <section className="main">
-        { reposList.map((repo) => {
+        { isRequisitionDone ? (
+          <Loading />
+        ) : ( reposList.map((repo) => {
           const { name, description, html_url, id } = repo;
           return (
             <section key={ id } className="repo-card">
@@ -42,7 +47,7 @@ render() {
               </section>
             </section>
           )
-        })}
+        }))}
       </section>
     )
   }

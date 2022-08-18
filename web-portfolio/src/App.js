@@ -7,11 +7,13 @@ import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
-import Habilities from './components/Habilities';
+import Skills from './components/Skills';
 // import Contact from './components/Contact';
 // Style imports
 import './css/Header.css';
 import './css/Projects.css';
+import './css/Skills.css';
+import './css/Loading.css';
 import './App.css';
 
 class App extends Component {
@@ -26,7 +28,7 @@ class App extends Component {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/projects" element={<Projects />} />
-          <Route exact path="/habilities" element={<Habilities />} />
+          <Route exact path="/skills" element={<Skills />} />
         </Routes>
       </div>
       </BrowserRouter>
