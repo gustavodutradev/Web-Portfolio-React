@@ -11,10 +11,13 @@
     margin-top: 1vh;
     margin-left: 1vh;
     width: 65vh;
+    min-height: 40vh;
     border-radius: 6px;
     border: 1px solid rgba(116, 116, 116, 0.5);
     box-shadow: 0 2px 5px rgba(148, 148, 148, 0.5);
     background-color: white;
+    margin-bottom: 2vh;
+    box-shadow: 0 15px 30px 10px rgba(0, 0, 0, 0.753);
 }
 
 #soft-skills-img {
@@ -26,17 +29,18 @@
     text-align: justify;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin: 1vh;
+    font-size: 1.5rem;
 }
 
 .table-container {
     border-radius: 6px;
     border: 1px solid rgba(116, 116, 116, 0.5);
-    box-shadow: 0 2px 5px rgba(148, 148, 148, 0.5);
+    box-shadow: 0 15px 30px 10px rgba(0, 0, 0, 0.753);
     background-color: white;
     padding: 5px;
 }
 
 #table-img {
-    width: 72vh;
-    height:50vh;
+    width: 70vh;
+    height: 45vh;
 }
