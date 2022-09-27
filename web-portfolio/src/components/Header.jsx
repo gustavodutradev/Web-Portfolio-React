@@ -1,12 +1,10 @@
-/* eslint-disable no-unused-vars */
 // Main Imports
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
-class Header extends Component {
-  render() {
-    return (
-        <header className="header">
+function Header() {
+  return (
+    <header className="header">
             <nav className="nav-links">
                 <section className="link-container">
                     <Link to="/">Home</Link>
@@ -22,8 +20,7 @@ class Header extends Component {
                 </section>
             </nav>
         </header>
-    )
-  }
-}
+  );
+};
 
 export default Header;
