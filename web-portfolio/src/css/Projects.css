@@ -5,7 +5,7 @@ flex-flow: row;
 overflow-x: scroll;
 justify-content: center;
 align-items: center;
-height: 50vh;
+height: 70vh;
 }
 
 .repo-card {

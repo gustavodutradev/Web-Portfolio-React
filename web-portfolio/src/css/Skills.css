@@ -41,6 +41,16 @@
 }
 
 #table-img {
-    width: 70vh;
-    height: 45vh;
+    width: 500px;
+    height: 350px;
+}
+
+.legend-blue {
+    font-weight: bold;
+    color:blue;
+}
+
+.legend-green {
+    font-weight: bold;
+    color:rgb(9, 223, 9);
 }
