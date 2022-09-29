@@ -4,6 +4,7 @@ import table from '../data/table.png';
 
 function Skills() {
   return (
+    <main className="main-skills">
     <section className="skills-container">
     <section className="soft-skills-container">
       <section className="soft-skills-summary">
@@ -28,6 +29,7 @@ function Skills() {
       </label>
     </section>
     </section>
+    </main>
   )
 }
 

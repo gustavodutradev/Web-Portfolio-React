@@ -16,7 +16,7 @@ function Header() {
                     <Link to="/skills">Skills</Link>
                 </section>
                 <section className="link-container">
-                    <Link to="/projects">Projects</Link>
+                    <Link to="/projects">GitHub Projects</Link>
                 </section>
             </nav>
         </header>
