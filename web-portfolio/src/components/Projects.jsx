@@ -39,7 +39,7 @@ import Loading from './Loading';
           rel="noreferrer"
           className="repo-url"
           >
-            { name }
+            Visite o repositório
           </a>
           </section>
         </section>
