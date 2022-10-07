@@ -1,5 +1,6 @@
 import React from 'react';
 import fotoHome from '../data/fotoHome.png';
+import Footer from './Footer';
 
 function Home() {
   return (
@@ -18,6 +19,9 @@ function Home() {
         />
       </section>
       </section> 
+      <section>
+      <Footer />
+      </section>
     </section>
   );
 };

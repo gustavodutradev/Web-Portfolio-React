@@ -10,7 +10,6 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 // import SideBar from './components/SideBar';
 import Header from './components/Header';
-// import Contact from './components/Contact';
 // Style imports
 import './css/Header.css';
 import './css/Projects.css';
