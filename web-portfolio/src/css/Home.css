@@ -42,11 +42,12 @@
 .foto-container {
     display: flex;
     justify-content: flex-end;
+    height: inherit;
 }
 
 .foto-home {
-    width: 45rem;
-    height: 32rem;
+    width: 47rem;
+    height: 34.5rem;
     opacity: 85%;
 }
 
