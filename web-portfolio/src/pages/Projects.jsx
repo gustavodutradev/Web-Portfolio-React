@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getMyReposFromGithub } from '../api';
-import Loading from './Loading';
+import Loading from '../components//Loading';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import Carrousel from './Carrousel';
+import Carrousel from '../components/Carrousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
   function Projects() {

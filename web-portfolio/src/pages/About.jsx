@@ -1,5 +1,5 @@
 import React from 'react'
-import BigHeads from './BigHeads';
+import BigHeads from '../components/BigHeads';
 
 function About() {
   return (

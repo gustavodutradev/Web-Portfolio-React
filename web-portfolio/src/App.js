@@ -3,22 +3,19 @@ import React, { Component } from 'react'
 // Logic imports
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 // Components Imports
-// import Header from './components/Header';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-// import SideBar from './components/SideBar';
-import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import NavBar from './components/NavBar';
+
 // Style imports
-import './css/Header.css';
 import './css/Projects.css';
 import './css/Skills.css';
 import './css/Loading.css';
 import './css/Home.css';
 import './css/Carrousel.css';
 import './App.css';
-import NavBar from './components/NavBar';
 
 class App extends Component {
   render() {
