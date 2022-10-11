@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getMyReposFromGithub } from '../api';
 import Loading from './Loading';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Carrousel from './Carrousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
   function Projects() {
 
@@ -20,33 +25,32 @@ import Loading from './Loading';
 
   return (
     <section className="main">
-    { loading ? (
-      <Loading />
-    ) : ( reposList.map((repo) => {
-      const { name, description, html_url, id } = repo;
-      return (
-        <section key={ id } className="repo-card">
-          <section className="repo-title-container">
-          <h3 className="repo-title">{ name }</h3>
-          </section>
-          <section className="repo-description-container">
-          <p className="repo-description">{ description }</p>
-          </section>
-          <section className="repo_url_container">
-          <a
-          target="_blank"
-          href={ html_url }
-          rel="noreferrer"
-          className="repo-url"
-          >
-            Visite o repositório
-          </a>
-          </section>
-        </section>
-      )
-    }))}
+       <section className="carousel-container">
+            <Carrousel />
+       </section>    
+    { loading ? ( <Loading />
+    ) : ( 
+      reposList.map((repo) => {
+        const { name, description, html_url, id } = repo;
+        return (
+          <section className="project-container"  key={id}>
+          <CardGroup style={{ width: '25rem' }}>
+            <Card style={{ width: '18rem' }}>
+            <Card.Body>
+              <Card.Title>{ name }</Card.Title>
+              <Card.Text>
+                { description }
+              </Card.Text>
+              <Button variant="primary" href={ html_url }>Go to repo</Button>
+            </Card.Body>
+            </Card>
+            </CardGroup>
+      </section>
+        )
+        }))}
+
   </section>
   )
 }
 
-export default Projects
+export default Projects;

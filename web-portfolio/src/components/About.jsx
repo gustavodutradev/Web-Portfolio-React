@@ -1,8 +1,9 @@
 import React from 'react'
+import BigHeads from './BigHeads';
 
 function About() {
   return (
-    <div>About</div>
+    <div><BigHeads /></div>
   );
 };
 
