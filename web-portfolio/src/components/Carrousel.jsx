@@ -4,7 +4,6 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
 } from 'reactstrap';
 
 const items = [
@@ -19,6 +18,12 @@ const items = [
     altText: 'Slide 2',
     caption: 'Slide 2',
     key: 2,
+  },
+  {
+    src: 'https://i.imgur.com/7cxc2l1.gif',
+    altText: 'Slide 3',
+    caption: 'Slide 3',
+    key: 3,
   },
 ];
 
@@ -51,15 +56,12 @@ function Carrousel(args) {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
       </CarouselItem>
     );
   });
 
   return (
+    <section className="carrousel-container">
     <Carousel
       activeIndex={activeIndex}
       next={next}
@@ -76,13 +78,16 @@ function Carrousel(args) {
         direction="prev"
         directionText="Previous"
         onClickHandler={previous}
+        className="carrousel-control"
       />
       <CarouselControl
         direction="next"
         directionText="Next"
         onClickHandler={next}
+        className="carrousel-control"
       />
     </Carousel>
+    </section>
   );
 }
 
