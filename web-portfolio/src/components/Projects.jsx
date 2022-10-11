@@ -4,6 +4,7 @@ import Loading from './Loading';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import Carrousel from './Carrousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
   function Projects() {
@@ -24,24 +25,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
   return (
     <section className="main">
-    { loading ? (
-      <Loading />
-    ) : ( reposList.map((repo) => {
-      const { name, description, html_url, id } = repo;
-      return (
-        <CardGroup key={id} style={{ width: '25rem' }}>
-          <Card style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Title>{ name }</Card.Title>
-            <Card.Text>
-              { description }
-            </Card.Text>
-            <Button variant="primary" href={ html_url }>Go to repo</Button>
-          </Card.Body>
-          </Card>
-          </CardGroup>
-      )
-    }))}
+       <section className="carousel-container">
+            <Carrousel />
+       </section>    
+    { loading ? ( <Loading />
+    ) : ( 
+      reposList.map((repo) => {
+        const { name, description, html_url, id } = repo;
+        return (
+          <section className="project-container"  key={id}>
+          <CardGroup style={{ width: '25rem' }}>
+            <Card style={{ width: '18rem' }}>
+            <Card.Body>
+              <Card.Title>{ name }</Card.Title>
+              <Card.Text>
+                { description }
+              </Card.Text>
+              <Button variant="primary" href={ html_url }>Go to repo</Button>
+            </Card.Body>
+            </Card>
+            </CardGroup>
+      </section>
+        )
+        }))}
+
   </section>
   )
 }

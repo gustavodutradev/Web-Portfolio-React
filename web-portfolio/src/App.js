@@ -16,14 +16,16 @@ import './css/Projects.css';
 import './css/Skills.css';
 import './css/Loading.css';
 import './css/Home.css';
+import './css/Carrousel.css';
 import './App.css';
+import NavBar from './components/NavBar';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
       <div>
-        <Header />
+        <NavBar />
       </div>
       <div className="page-body">
         <Routes>

@@ -5,5 +5,17 @@
     align-content: center;
     flex-wrap: wrap;
     margin: 2rem;
-    gap: 1rem;
+    gap: 2.5rem;
+  }
+  
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 1rem;
+  }
+
+  .project-container:hover {
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 4px #00000033;
+    transition: 0.2s;
   }

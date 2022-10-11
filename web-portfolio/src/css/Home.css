@@ -43,11 +43,12 @@
     display: flex;
     justify-content: flex-end;
     height: inherit;
+    height: 38rem;
 }
 
 .foto-home {
-    width: 47rem;
-    height: 34.5rem;
+    width: 54rem;
+    height: inherit;
     opacity: 85%;
 }
 
