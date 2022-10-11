@@ -1,6 +1,6 @@
 import React from 'react';
 import fotoHome from '../data/fotoHome.png';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
