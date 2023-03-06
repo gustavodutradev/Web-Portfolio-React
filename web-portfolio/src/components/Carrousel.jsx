@@ -48,45 +48,43 @@ function Carrousel(args) {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-      </CarouselItem>
-    );
-  });
+  const slides = items.map((item) => (
+    <CarouselItem
+      onExiting={ () => setAnimating(true) }
+      onExited={ () => setAnimating(false) }
+      key={ item.src }
+    >
+      <img src={ item.src } alt={ item.altText } />
+    </CarouselItem>
+  ));
 
   return (
     <section className="carrousel-container">
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-      {...args}
-    >
-      <CarouselIndicators
-        items={items}
-        activeIndex={activeIndex}
-        onClickHandler={goToIndex}
-      />
-      {slides}
-      <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={previous}
-        className="carrousel-control"
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={next}
-        className="carrousel-control"
-      />
-    </Carousel>
+      <Carousel
+        activeIndex={ activeIndex }
+        next={ next }
+        previous={ previous }
+        { ...args }
+      >
+        <CarouselIndicators
+          items={ items }
+          activeIndex={ activeIndex }
+          onClickHandler={ goToIndex }
+        />
+        {slides}
+        <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={ previous }
+          className="carrousel-control"
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={ next }
+          className="carrousel-control"
+        />
+      </Carousel>
     </section>
   );
 }

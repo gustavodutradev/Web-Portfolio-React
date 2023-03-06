@@ -1,5 +1,5 @@
 // Main imports
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // Logic imports
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 // Components Imports
@@ -21,19 +21,19 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <div>
-        <NavBar />
-      </div>
-      <div className="page-body">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/projects" element={<Projects />} />
-          <Route exact path="/skills" element={<Skills />} />
-        </Routes>
-      </div>
+        <div>
+          <NavBar />
+        </div>
+        <div className="page-body">
+          <Routes>
+            <Route exact path="/" element={ <Home /> } />
+            <Route exact path="/about" element={ <About /> } />
+            <Route exact path="/projects" element={ <Projects /> } />
+            <Route exact path="/skills" element={ <Skills /> } />
+          </Routes>
+        </div>
       </BrowserRouter>
-    )
+    );
   }
 }
 
