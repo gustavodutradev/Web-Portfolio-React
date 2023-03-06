@@ -1,10 +1,9 @@
-import React from 'react'
-import BigHeads from '../components/BigHeads';
+import React from 'react';
 
 function About() {
   return (
-    <div><BigHeads /></div>
+    <div>about</div>
   );
-};
+}
 
 export default About;
