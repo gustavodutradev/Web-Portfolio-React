@@ -22,13 +22,12 @@ function NavBar() {
         color="faded"
         light
         style={ {
-          border: '1px solid red',
           height: '7rem',
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: '#00000033',
+          backgroundColor: '#51bd9c',
         } }
       >
         <NavbarBrand
@@ -37,16 +36,23 @@ function NavBar() {
           style={ {
             display: 'flex',
             flexDirection: 'row',
-            width: '95%',
             height: '100px',
-            justifyContent: 'center',
-            border: '1px solid red',
+            justifyContent: 'space-between',
           } }
         >
           <BigHeads />
         </NavbarBrand>
         <NavbarToggler onClick={ toggleNavbar } className="me-2" />
-        <Collapse isOpen={ !collapsed } navbar style={ { backgroundColor: '#00000033' } }>
+        <Collapse
+          isOpen={ !collapsed }
+          navbar
+          style={ {
+            backgroundColor: '#ffe8b3',
+            borderRadius: '5px',
+            padding: '10px',
+            marginTop: '1rem',
+          } }
+        >
           <Nav navbar>
             <NavItem>
               <NavLink
