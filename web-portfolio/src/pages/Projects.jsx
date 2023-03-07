@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Loading from '../components/Loading';
-import { getMyReposFromGithub } from '../api';
+import getMyReposFromGithub from '../helpers/api';
 import Carrousel from '../components/Carrousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImageHandler from '../helpers/imageHandler';
