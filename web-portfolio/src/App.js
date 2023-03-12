@@ -13,8 +13,6 @@ import NavBar from './components/NavBar';
 import './css/Projects.css';
 import './css/Skills.css';
 import './css/Loading.css';
-import './css/Home.css';
-import './css/Carrousel.css';
 import './App.css';
 
 class App extends Component {
