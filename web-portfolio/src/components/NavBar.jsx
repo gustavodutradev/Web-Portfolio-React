@@ -47,10 +47,12 @@ function NavBar() {
           isOpen={ !collapsed }
           navbar
           style={ {
-            backgroundColor: '#ffe8b3',
+            backgroundColor: '#ffe8b38f',
             borderRadius: '5px',
             padding: '10px',
             marginTop: '1rem',
+            position: 'relative',
+            zIndex: '1',
           } }
         >
           <Nav navbar>
