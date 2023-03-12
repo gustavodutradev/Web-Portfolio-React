@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+import tw from 'twin.macro';
+
 import {
   Carousel,
   CarouselItem,
@@ -9,8 +12,8 @@ import {
 const items = [
   {
     src: 'https://i.imgur.com/riWZK4t.gif',
-    altText: 'Slide 1',
-    caption: 'Slide 1',
+    altText: 'Lista de tarefas utilizando JavaScript e CSS puros',
+    caption: 'TO DO LIST',
     key: 1,
   },
   {
@@ -26,6 +29,16 @@ const items = [
     key: 3,
   },
 ];
+
+const SCarrousel = styled.section`
+  ${tw`
+  block
+  p-10
+  `}
+  width: 900px;
+  background-color: rgba(0, 0, 0, 0.400);
+  border-radius: 30px;
+`;
 
 function Carrousel(args) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,17 +67,22 @@ function Carrousel(args) {
       onExited={ () => setAnimating(false) }
       key={ item.src }
     >
-      <img src={ item.src } alt={ item.altText } />
+      <img
+        src={ item.src }
+        alt={ item.altText }
+        className="d-block w-100"
+      />
     </CarouselItem>
   ));
 
   return (
-    <section className="carrousel-container">
+    <SCarrousel>
       <Carousel
         activeIndex={ activeIndex }
         next={ next }
         previous={ previous }
         { ...args }
+        fade
       >
         <CarouselIndicators
           items={ items }
@@ -76,16 +94,15 @@ function Carrousel(args) {
           direction="prev"
           directionText="Previous"
           onClickHandler={ previous }
-          className="carrousel-control"
         />
         <CarouselControl
           direction="next"
           directionText="Next"
           onClickHandler={ next }
-          className="carrousel-control"
         />
       </Carousel>
-    </section>
+
+    </SCarrousel>
   );
 }
 
