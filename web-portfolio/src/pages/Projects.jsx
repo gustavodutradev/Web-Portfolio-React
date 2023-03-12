@@ -5,7 +5,6 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Loading from '../components/Loading';
 import getMyReposFromGithub from '../helpers/api';
-import Carrousel from '../components/Carrousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImageHandler from '../helpers/imageHandler';
 
@@ -26,9 +25,6 @@ function Projects() {
 
   return (
     <section className="main">
-      <section className="carousel-container">
-        <Carrousel />
-      </section>
       { loading ? (<Loading />
       ) : (
         reposList.map((repo) => {
