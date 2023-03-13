@@ -1,7 +1,7 @@
 // Main imports
 import React, { Component } from 'react';
 // Logic imports
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 // Components Imports
 import Home from './pages/Home';
 import About from './pages/About';
@@ -24,10 +24,11 @@ class App extends Component {
         </div>
         <div className="page-body">
           <Routes>
-            <Route exact path="/" element={ <Home /> } />
-            <Route exact path="/about" element={ <About /> } />
-            <Route exact path="/projects" element={ <Projects /> } />
-            <Route exact path="/skills" element={ <Skills /> } />
+            <Route path="/Web-Portfolio-React" element={ <Navigate to="/home" /> } />
+            <Route path="/home" element={ <Home /> } />
+            <Route path="/about" element={ <About /> } />
+            <Route path="/projects" element={ <Projects /> } />
+            <Route path="/skills" element={ <Skills /> } />
           </Routes>
         </div>
       </BrowserRouter>
