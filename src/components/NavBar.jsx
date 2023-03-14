@@ -9,6 +9,8 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { FaCode } from 'react-icons/fa';
+import { FcAbout, FcHome, FcContacts } from 'react-icons/fc';
 import BigHeads from './BigHeads';
 
 function NavBar() {
@@ -27,7 +29,11 @@ function NavBar() {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: '#51bd9c',
+          backgroundColor: '#006494',
+          position: 'fixed',
+          zIndex: '5',
+          top: '0',
+          width: '100%',
         } }
       >
         <NavbarBrand
@@ -47,7 +53,7 @@ function NavBar() {
           isOpen={ !collapsed }
           navbar
           style={ {
-            backgroundColor: '#ffe8b38f',
+            backgroundColor: '#006494',
             borderRadius: '5px',
             padding: '10px',
             marginTop: '1rem',
@@ -60,43 +66,71 @@ function NavBar() {
               <NavLink
                 href="/"
                 style={ {
+                  color: 'white',
                   fontSize: '1.3rem',
                   fontWeight: 'bold',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  display: 'flex',
+                  gap: '10px',
                 } }
               >
+                <FcHome />
                 Home
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                href="/projects"
-                style={ {
-                  fontSize: '1.3rem',
-                  fontWeight: 'bold',
-                } }
-              >
-                Projects
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                href="/skills"
-                style={ {
-                  fontSize: '1.3rem',
-                  fontWeight: 'bold',
-                } }
-              >
-                Skills
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 href="/about"
                 style={ {
+                  color: 'white',
                   fontSize: '1.3rem',
                   fontWeight: 'bold',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  display: 'flex',
+                  gap: '10px',
                 } }
               >
+                <FcAbout />
+                About
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href="/projects"
+                style={ {
+                  color: 'white',
+                  fontSize: '1.3rem',
+                  fontWeight: 'bold',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  display: 'flex',
+                  gap: '10px',
+                } }
+              >
+                <FaCode
+                  style={ {
+                    color: '#42C920',
+                  } }
+                />
+                Projects
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href="/contact"
+                style={ {
+                  color: 'white',
+                  fontSize: '1.3rem',
+                  fontWeight: 'bold',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  display: 'flex',
+                  gap: '10px',
+                } }
+              >
+                <FcContacts />
                 Contact
               </NavLink>
             </NavItem>
