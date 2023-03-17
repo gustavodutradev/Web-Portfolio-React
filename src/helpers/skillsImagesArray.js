@@ -1,9 +1,9 @@
 // import all images from the images folder
-import html from '../data/images/html5.png';
-import css from '../data/images/css.png';
-import js from '../data/images/javascript.png';
-import react from '../data/images/react.png';
-import redux from '../data/images/redux.png';
+import html from '../data/skillsImages/html5.png';
+import css from '../data/skillsImages/css.png';
+import js from '../data/skillsImages/javascript.png';
+import react from '../data/skillsImages/react.png';
+import redux from '../data/skillsImages/redux.png';
 
 const skillsImagesArray = [html, css, js, react, redux];
 
