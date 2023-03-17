@@ -25,8 +25,8 @@
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable max-len */
 import React from 'react';
-import skillsMindSight from '../../data/images/skillsMindSight.png';
-import table from '../../data/images/table.png';
+import skillsMindSight from '../../data/skillsImages/skillsMindSight.png';
+import table from '../../data/skillsImages/table.png';
 
 function Contact() {
   return (
