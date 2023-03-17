@@ -5,7 +5,6 @@ import Button from '../../components/LearnMoreButton';
 import Carrousel from '../../components/Carrousel';
 import skillsImagesArray from '../../helpers/skillsImagesArray';
 
-// styles
 import SHomeContainer from './styles/SHomeContainer';
 import SAbout from './styles/SAbout';
 import SSkills from './styles/SSkills';
@@ -20,7 +19,7 @@ function Home() {
       <SAbout>
         <p>
           Olá, bem-vindo ao meu portfólio! Meu nome é Gustavo, tenho 30 anos e estou em transição de carreira.
-          Oriundo da Engenharia Ambiental, decidi buscar novos desafios e encontrei na programação uma nova paixão.
+          Oriundo da Engenharia Ambiental, decidi buscar novos desafios e encontrei na programação uma nova paixão e uma oportunidade de aplicar conhecimentos que adquiri na engenharia.
           Atualmente estou estudando Desenvolvimento Web Full Stack na Trybe, onde aprendo as tecnologias mais utilizadas no mercado de trabalho. Estou em busca de uma oportunidade de trabalho para colocar em prática os conhecimentos adquiridos e me tornar um profissional de tecnologia cada vez melhor.
         </p>
         <Button
