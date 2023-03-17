@@ -1,0 +1,17 @@
+.carousel-container {
+width: 100%;
+display: flex;
+justify-content: center;
+background: rgba(0, 0, 0, 0.726);
+border-radius: 1rem;
+box-shadow: 0 0 10px 5px #00000033;
+}
+
+.carousel-indicators:has(button) {
+    color: black;
+    background-color: black;
+}
+
+.carousel-item, img {
+    transform: scale(0.9);
+}
