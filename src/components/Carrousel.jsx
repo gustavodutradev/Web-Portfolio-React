@@ -35,7 +35,7 @@ const SCarrousel = styled.section`
   block
   p-10
   `}
-  width: 900px;
+  max-width: 700px;
   background-color: rgba(0, 0, 0, 0.400);
   border-radius: 30px;
 `;
