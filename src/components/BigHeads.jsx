@@ -26,8 +26,8 @@ function BigHeads() {
         mouth="grin"
         skinTone="light"
         style={ {
-          width: '5rem',
-          height: '5rem',
+          width: '40px',
+          height: '40px',
         } }
       />
     </div>
