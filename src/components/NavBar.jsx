@@ -107,7 +107,7 @@ function NavBar() {
             </NavItem>
             <NavItem>
               <NavLink
-                href="/contact"
+                href="#contact"
                 style={ {
                   color: 'orange',
                   fontSize: '1rem',
