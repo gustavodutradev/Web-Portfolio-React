@@ -19,6 +19,11 @@ const SAbout = styled.section`
   border-radius: 20px;
   background: rgba(255,255,255,0.5);
   backdrop-filter: blur(1px);
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    max-width: 400px;
+  }
 `;
 
 export default SAbout;
