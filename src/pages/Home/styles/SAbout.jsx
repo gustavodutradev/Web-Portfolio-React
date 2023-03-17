@@ -7,7 +7,7 @@ const SAbout = styled.section`
   flex-col
   justify-center
   items-center
-  mt-5
+  m-5
   `}
   color: #33ff00;
   font-weight: bold;
