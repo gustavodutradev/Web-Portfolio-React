@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../components/LearnMoreButton';
+import Footer from '../../components/Footer';
 import Carrousel from '../../components/Carrousel';
 import skillsImagesArray from '../../helpers/skillsImagesArray';
 
@@ -20,6 +21,7 @@ function Home() {
         <p>
           Olá, bem-vindo ao meu portfólio! Meu nome é Gustavo, tenho 30 anos e estou em transição de carreira.
           Oriundo da Engenharia Ambiental, decidi buscar novos desafios e encontrei na programação uma nova paixão e uma oportunidade de aplicar conhecimentos que adquiri na engenharia.
+
           Atualmente estou estudando Desenvolvimento Web Full Stack na Trybe, onde aprendo as tecnologias mais utilizadas no mercado de trabalho. Estou em busca de uma oportunidade de trabalho para colocar em prática os conhecimentos adquiridos e me tornar um profissional de tecnologia cada vez melhor.
         </p>
         <Button
@@ -46,12 +48,8 @@ function Home() {
         />
       </SProjects>
 
-      <SContact>
-        CONTATO
-        <Button
-          onClick={ () => navigate('/contact') }
-          name="Saiba mais"
-        />
+      <SContact id="contact">
+        <Footer />
       </SContact>
     </SHomeContainer>
   );
