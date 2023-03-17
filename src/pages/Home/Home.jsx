@@ -1,73 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
-import tw from 'twin.macro';
-import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
-import javascript from '../../data/javascript.png';
-import css from '../../data/css.png';
-import html from '../../data/html5.png';
-import react from '../../data/react.svg';
 import Button from '../../components/LearnMoreButton';
 import Carrousel from '../../components/Carrousel';
+import skillsImagesArray from '../../helpers/skillsImagesArray';
 
-const SHomeContainer = styled.section`
-  ${tw`
-  flex
-  flex-col
-  gap-6
-  `}
-`;
-
-const SAbout = styled.section`
-  ${tw`
-  flex
-  flex-col
-  justify-center
-  items-center
-  `}
-  color: #006594ee;
-  font-weight: bold;
-  text-align: justify;
-  background-color: white;
-  padding: 20px;
-`;
-
-const SProjects = styled.section`
-  ${tw`
-  flex
-  flex-col
-  justify-center
-  items-center
-  `}
-  background-color: #006494;
-  padding: 20px;
-  gap: 2rem;
-`;
-
-const SSkills = styled.section`
-  ${tw`
-  flex
-  flex-wrap
-  justify-center
-  items-center
-  `}
-  img {
-    width: 140px;
-    height: auto;
-    background: transparent;
-    filter: drop-shadow(3px 3px 3px #1f1f1f);
-    padding: 0 20px;
-  }
-`;
-
-const SContact = styled.section`
-  ${tw`
-  // flex
-  // flex-col
-  // justify-center
-  // items-center
-  `}
-`;
+// styles
+import SHomeContainer from './styles/SHomeContainer';
+import SAbout from './styles/SAbout';
+import SSkills from './styles/SSkills';
+import SProjects from './styles/SProjects';
+import SContact from './styles/SContact';
 
 function Home() {
   const navigate = useNavigate();
@@ -87,18 +30,13 @@ function Home() {
       </SAbout>
 
       <SSkills>
-        <div>
-          <img src={ javascript } alt="css-logo" />
-        </div>
-        <div>
-          <img src={ react } alt="css-logo" />
-        </div>
-        <div>
-          <img src={ html } alt="css-logo" />
-        </div>
-        <div>
-          <img src={ css } alt="css-logo" />
-        </div>
+        {
+          skillsImagesArray.map((skill, index) => (
+            <div key={ index }>
+              <img src={ skill } alt={ `skill-${index}` } />
+            </div>
+          ))
+        }
       </SSkills>
 
       <SProjects>
@@ -116,7 +54,6 @@ function Home() {
           name="Saiba mais"
         />
       </SContact>
-
     </SHomeContainer>
   );
 }
