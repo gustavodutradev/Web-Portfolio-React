@@ -31,18 +31,58 @@ function Projects() {
           const { name, description, html_url, id } = repo;
           console.log(repo);
           return (
-            <section className="project-container" key={ id }>
-              <CardGroup style={ { width: '25rem' } }>
-                <Card style={ { width: '18rem' } }>
-                  <Card.Body>
-                    <Card.Title>{ name }</Card.Title>
-                    <Card.Img src={ ImageHandler(name) } alt="logo" />
-                    <Card.Text>
+            <section className="project-container" key={ id } style={ { gap: '10px' } }>
+              <CardGroup>
+                <Card>
+                  <Card.Body
+                    style={ {
+                      maxWidth: '250px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                      gap: '5px',
+                    } }
+                  >
+                    <Card.Title
+                      style={ {
+                        fontSize: '15px',
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                      } }
+                    >
+                      { name.replace('Project-', '') }
+
+                    </Card.Title>
+                    <Card.Img
+                      src={ ImageHandler(name) }
+                      alt="logo"
+                      style={ {
+                        objectFit: 'contain',
+                        width: '100%',
+                        height: 'auto',
+                      } }
+                    />
+                    <Card.Text
+                      style={ {
+                        fontSize: '11px',
+                        textJustify: 'justify',
+                      } }
+                    >
                       {' '}
                       { description }
                       {' '}
                     </Card.Text>
-                    <Button variant="primary" href={ html_url }>Go to repo</Button>
+                    <Button
+                      variant="primary"
+                      href={ html_url }
+                      style={ {
+                        fontSize: '12px',
+                        fontWeight: 'bold',
+                        width: '100%',
+                      } }
+                    >
+                      Repositório
+                    </Button>
                   </Card.Body>
                 </Card>
               </CardGroup>
