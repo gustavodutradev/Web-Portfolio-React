@@ -4,7 +4,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -24,30 +23,19 @@ function NavBar() {
         color="faded"
         light
         style={ {
-          height: '7rem',
+          height: '60px',
           display: 'flex',
-          flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#006494',
-          position: 'fixed',
-          zIndex: '5',
+          position: 'relative',
+          zIndex: '1',
           top: '0',
           width: '100%',
         } }
       >
-        <NavbarBrand
-          href="/"
-          className="me-auto"
-          style={ {
-            display: 'flex',
-            flexDirection: 'row',
-            height: '100px',
-            justifyContent: 'space-between',
-          } }
-        >
-          <BigHeads />
-        </NavbarBrand>
+        <BigHeads />
+
         <NavbarToggler onClick={ toggleNavbar } className="me-2" />
         <Collapse
           isOpen={ !collapsed }
@@ -66,8 +54,8 @@ function NavBar() {
               <NavLink
                 href="/"
                 style={ {
-                  color: 'white',
-                  fontSize: '1.3rem',
+                  color: 'orange',
+                  fontSize: '1rem',
                   fontWeight: 'bold',
                   alignContent: 'center',
                   alignItems: 'center',
@@ -83,8 +71,8 @@ function NavBar() {
               <NavLink
                 href="/about"
                 style={ {
-                  color: 'white',
-                  fontSize: '1.3rem',
+                  color: 'orange',
+                  fontSize: '1rem',
                   fontWeight: 'bold',
                   alignContent: 'center',
                   alignItems: 'center',
@@ -100,8 +88,8 @@ function NavBar() {
               <NavLink
                 href="/projects"
                 style={ {
-                  color: 'white',
-                  fontSize: '1.3rem',
+                  color: 'orange',
+                  fontSize: '1rem',
                   fontWeight: 'bold',
                   alignContent: 'center',
                   alignItems: 'center',
@@ -121,8 +109,8 @@ function NavBar() {
               <NavLink
                 href="/contact"
                 style={ {
-                  color: 'white',
-                  fontSize: '1.3rem',
+                  color: 'orange',
+                  fontSize: '1rem',
                   fontWeight: 'bold',
                   alignContent: 'center',
                   alignItems: 'center',
