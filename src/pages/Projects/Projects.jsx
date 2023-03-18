@@ -7,6 +7,8 @@ import Loading from '../../components/Loading';
 import getMyReposFromGithub from '../../helpers/api';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImageHandler from '../../helpers/imageHandler';
+import SCard from './styles/SCardsContainer';
+import SProjectsContainer from './styles/SProjectsContainer';
 
 function Projects() {
   const [loading, setLoading] = useState(false);
@@ -24,16 +26,21 @@ function Projects() {
   }, []);
 
   return (
-    <section className="main">
+    <SProjectsContainer>
       { loading ? (<Loading />
       ) : (
         reposList.map((repo) => {
           const { name, description, html_url, id } = repo;
           console.log(repo);
           return (
-            <section className="project-container" key={ id } style={ { gap: '10px' } }>
+            <SCard key={ id }>
               <CardGroup>
-                <Card>
+                <Card
+                  style={ {
+                    background: 'rgba(255,255,255,0.5)',
+                    backdropFilter: 'blur(1px)',
+                  } }
+                >
                   <Card.Body
                     style={ {
                       maxWidth: '250px',
@@ -41,6 +48,7 @@ function Projects() {
                       flexDirection: 'column',
                       justifyContent: 'space-between',
                       gap: '5px',
+                      borderRadius: '20px',
                     } }
                   >
                     <Card.Title
@@ -68,9 +76,7 @@ function Projects() {
                         textJustify: 'justify',
                       } }
                     >
-                      {' '}
                       { description }
-                      {' '}
                     </Card.Text>
                     <Button
                       variant="primary"
@@ -86,11 +92,10 @@ function Projects() {
                   </Card.Body>
                 </Card>
               </CardGroup>
-            </section>
+            </SCard>
           );
         }))}
-
-    </section>
+    </SProjectsContainer>
   );
 }
 
