@@ -38,7 +38,7 @@ justify-content: center;
 font-weight: bold;
 font-size: 9px;
 color: #000000;
-background-color: aqua;
+background-color: orange;
 `;
 
 function Footer() {
@@ -49,7 +49,7 @@ function Footer() {
           <a href="https://www.linkedin.com/in/gustavodutradev/" target="_blank" rel="noreferrer">
             <FaLinkedin
               style={ {
-                color: '#0077b5',
+                color: '#0072b1',
                 width: '35px',
                 height: '35px',
               } }
