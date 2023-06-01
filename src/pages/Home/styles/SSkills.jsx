@@ -14,6 +14,13 @@ const SSkills = styled.section`
     filter: drop-shadow(3px 3px 3px #1f1f1f);
     padding: 1rem;
   }
+
+  @media (max-width: 480px) {
+    img {
+      max-width: 80px;
+      filter: drop-shadow(3px 3px 3px #1f1f1f);
+    }
+  }
 `;
 
 export default SSkills;

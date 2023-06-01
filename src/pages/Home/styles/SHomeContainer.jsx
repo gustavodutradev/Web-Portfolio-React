@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import testeBG from '../../../data/images/bgteste.jpg';
+import testeBG from '../../../data/skillsImages/bgteste.jpg';
 
 const SHomeContainer = styled.section`
   ${tw`

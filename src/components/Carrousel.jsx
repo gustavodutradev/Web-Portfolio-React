@@ -38,6 +38,10 @@ const SCarrousel = styled.section`
   max-width: 700px;
   background-color: rgba(0, 0, 0, 0.400);
   border-radius: 30px;
+
+    @media (max-width: 480px) {
+    max-width: 400px;
+  }
 `;
 
 function Carrousel(args) {

@@ -1,9 +1,18 @@
+import pixelArt from '../data/reposImages/pixelart.png';
+import playgroundFunctions from '../data/reposImages/playground.jpg';
+import elections from '../data/reposImages/elections.jpg';
+import lessons from '../data/reposImages/lessons.png';
+
 function ImageHandler(title) {
   switch (title) {
   case 'Project-Pixels-Art':
-    return 'https://criticalhits.com.br/wp-content/uploads/2022/03/goku_an6e.h720-768x561.webp';
+    return pixelArt;
   case 'Project-Playground-Functions':
-    return 'https://sm.ign.com/t/ign_br/screenshot/default/dragon-ball-super-super-hero-bulma_y33z.960.jpg';
+    return playgroundFunctions;
+  case 'counting-of-elections-2022':
+    return elections;
+  case 'Project-Lessons-Learned':
+    return lessons;
   default: console.log('Image not found');
   }
 }
