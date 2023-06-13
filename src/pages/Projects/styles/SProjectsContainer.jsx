@@ -5,10 +5,8 @@ const SProjectsContainer = styled.section`
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
     gap: 2rem;
     padding: 2.5rem;
     background-image: url(${projectsBG});
