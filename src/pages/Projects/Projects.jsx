@@ -1,14 +1,19 @@
 /* eslint-disable camelcase */
-import React, { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import React, { useEffect, useState } from 'react';
+
+// components
 import Loading from '../../components/Loading';
+
+// api
 import getMyReposFromGithub from '../../helpers/api';
+
+// styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ImageHandler from '../../helpers/imageHandler';
 import SCard from './styles/SCardsContainer';
 import SProjectsContainer from './styles/SProjectsContainer';
+import SLink from './styles/SRepoLink';
+import Topics from './styles/STopics';
+import STopicsContainer from './styles/STopicsContainer';
 
 function Projects() {
   const [loading, setLoading] = useState(false);
@@ -17,6 +22,7 @@ function Projects() {
   const getReposResponse = async () => {
     setLoading(true);
     const repos = await getMyReposFromGithub();
+    console.log(repos);
     setReposList(repos);
     setLoading(false);
   };
@@ -30,68 +36,21 @@ function Projects() {
       { loading ? (<Loading />
       ) : (
         reposList.map((repo) => {
-          const { name, description, html_url, id } = repo;
-          console.log(repo);
+          const { name, description, html_url, id, topics } = repo;
           return (
             <SCard key={ id }>
-              <CardGroup>
-                <Card
-                  style={ {
-                    background: 'rgba(255,255,255,0.5)',
-                    backdropFilter: 'blur(1px)',
-                  } }
-                >
-                  <Card.Body
-                    style={ {
-                      maxWidth: '250px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      gap: '5px',
-                      borderRadius: '20px',
-                    } }
-                  >
-                    <Card.Title
-                      style={ {
-                        fontSize: '15px',
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                      } }
-                    >
-                      { name.replace('Project-', '') }
-
-                    </Card.Title>
-                    <Card.Img
-                      src={ ImageHandler(name) }
-                      alt="logo"
-                      style={ {
-                        objectFit: 'contain',
-                        width: '100%',
-                        height: 'auto',
-                      } }
-                    />
-                    <Card.Text
-                      style={ {
-                        fontSize: '11px',
-                        textJustify: 'justify',
-                      } }
-                    >
-                      { description }
-                    </Card.Text>
-                    <Button
-                      variant="primary"
-                      href={ html_url }
-                      style={ {
-                        fontSize: '12px',
-                        fontWeight: 'bold',
-                        width: '100%',
-                      } }
-                    >
-                      Repositório
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </CardGroup>
+              <h1>{name}</h1>
+              <p>{description}</p>
+              <STopicsContainer>
+                {topics.map((topic) => <Topics key={ topic }>{topic}</Topics>)}
+              </STopicsContainer>
+              <SLink
+                href={ html_url }
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visite o repositório!
+              </SLink>
             </SCard>
           );
         }))}
