@@ -16,6 +16,10 @@ const Topics = styled.span`
         background-color: #006494;
         color: orange;
     }
-    `;
+
+    @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+`;
 
 export default Topics;
