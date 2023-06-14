@@ -5,7 +5,7 @@ const SSkills = styled.section`
   ${tw`
   flex
   flex-wrap
-  justify-between
+  justify-center
   items-center
   `}
   img {
@@ -17,7 +17,7 @@ const SSkills = styled.section`
 
   @media (max-width: 480px) {
     img {
-      max-width: 80px;
+      max-width: 70px;
       filter: drop-shadow(3px 3px 3px #1f1f1f);
     }
   }
