@@ -1,16 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../components/LearnMoreButton';
-import Footer from '../../components/Footer';
 import Carrousel from '../../components/Carrousel';
+import Button from '../../components/LearnMoreButton';
 import skillsImagesArray from '../../helpers/skillsImagesArray';
 
-import SHomeContainer from './styles/SHomeContainer';
 import SAbout from './styles/SAbout';
-import SSkills from './styles/SSkills';
+import SHomeContainer from './styles/SHomeContainer';
 import SProjects from './styles/SProjects';
-import SContact from './styles/SContact';
+import SSkills from './styles/SSkills';
 
 function Home() {
   const navigate = useNavigate();
@@ -20,9 +18,11 @@ function Home() {
       <SAbout>
         <p>
           Olá, bem-vindo ao meu portfólio! Meu nome é Gustavo, tenho 30 anos e estou em transição de carreira.
-          Oriundo da Engenharia Ambiental, decidi buscar novos desafios e encontrei na programação uma nova paixão e uma oportunidade de aplicar conhecimentos que adquiri na engenharia.
-
-          Atualmente estou estudando Desenvolvimento Web Full Stack na Trybe, onde aprendo as tecnologias mais utilizadas no mercado de trabalho. Estou em busca de uma oportunidade de trabalho para colocar em prática os conhecimentos adquiridos e me tornar um profissional de tecnologia cada vez melhor.
+          Comecei minha carreira Engenharia Ambiental e Sanitária, porém decidi buscar novos desafios e algo que me fizesse feliz, e encontrei na programação uma nova paixão e também uma oportunidade de aplicar conhecimentos que adquiri na engenharia.
+        </p>
+        <p>
+          Atualmente estou capacitado para exercer a função de
+          desenvolvedora Full-Stack, após ter concluído o curso de Desenvolvimento Web na Trybe. Estou em busca de uma oportunidade de trabalho para colocar em prática os conhecimentos adquiridos e me tornar um profissional de tecnologia cada vez melhor e com aprendizado contínuo.
         </p>
         <Button
           onClick={ () => navigate('/about') }
@@ -47,10 +47,6 @@ function Home() {
           name="Saiba mais"
         />
       </SProjects>
-
-      <SContact id="contact">
-        <Footer />
-      </SContact>
     </SHomeContainer>
   );
 }
