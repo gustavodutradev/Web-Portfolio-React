@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const SFooter = styled.footer`
     bottom: 0;
     left: 0;
     right: 0;
-    background: #111;
+    background: #121212;
     height: auto;
     width: 100vw;
     color: #fff;
@@ -34,16 +34,17 @@ position: relative;
 bottom: 0;
 display: flex;
 text-align: center;
-justify-content: center;
+justify-content: space-around;
 font-weight: bold;
 font-size: 9px;
-color: #000000;
+color: #121212;
 background-color: orange;
+padding: 0.2rem 0.5rem;
 `;
 
 function Footer() {
   return (
-    <SFooter className="footer">
+    <SFooter>
       <SList>
         <SListItem>
           <a href="https://www.linkedin.com/in/gustavodutradev/" target="_blank" rel="noreferrer">
@@ -81,7 +82,7 @@ function Footer() {
         </SListItem>
       </SList>
       <SDevelopedWith>
-        Desenvolvido por Gustavo Dutra, utilizando React, Tailwind, Styled Components, React Icons e muito carinho!
+        Desenvolvido por Gustavo Dutra, utilizando React, Tailwind, Styled Components, Bootstrap, React Icons e muito carinho!
       </SDevelopedWith>
     </SFooter>
   );
