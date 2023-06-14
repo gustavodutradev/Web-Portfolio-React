@@ -22,6 +22,10 @@ const SCard = styled.section`
         font-weight: bold;
         color:#006494;
     }
+
+    @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export default SCard;

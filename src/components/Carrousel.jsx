@@ -4,9 +4,9 @@ import tw from 'twin.macro';
 
 import {
   Carousel,
-  CarouselItem,
   CarouselControl,
   CarouselIndicators,
+  CarouselItem,
 } from 'reactstrap';
 
 const items = [

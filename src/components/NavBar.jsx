@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-max-depth */
 import React, { useState } from 'react';
+import { FaCode } from 'react-icons/fa';
+import { FcAbout, FcContacts, FcHome } from 'react-icons/fc';
 import {
   Collapse,
-  Navbar,
-  NavbarToggler,
   Nav,
   NavItem,
   NavLink,
+  Navbar,
+  NavbarToggler,
 } from 'reactstrap';
-import { FaCode } from 'react-icons/fa';
-import { FcAbout, FcHome, FcContacts } from 'react-icons/fc';
 import BigHeads from './BigHeads';
 
 function NavBar() {
@@ -34,7 +34,9 @@ function NavBar() {
           width: '100%',
         } }
       >
-        <BigHeads />
+        <NavLink href="/">
+          <BigHeads />
+        </NavLink>
 
         <NavbarToggler onClick={ toggleNavbar } className="me-2" />
         <Collapse
@@ -47,6 +49,7 @@ function NavBar() {
             marginTop: '1rem',
             position: 'relative',
             zIndex: '1',
+            opacity: '0.9',
           } }
         >
           <Nav navbar>
@@ -107,7 +110,7 @@ function NavBar() {
             </NavItem>
             <NavItem>
               <NavLink
-                href="#contact"
+                href="/contact"
                 style={ {
                   color: 'orange',
                   fontSize: '1rem',

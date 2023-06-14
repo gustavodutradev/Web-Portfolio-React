@@ -1,18 +1,19 @@
 // Main imports
 import React, { Component } from 'react';
 // Logic imports
-import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 // Components Imports
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Projects from './pages/Projects/Projects';
-import Contact from './pages/Contact/Contact';
+import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
+import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
 
 // Style imports
-import './css/Skills.css';
-import './css/Loading.css';
 import './App.css';
+import './css/Loading.css';
+import './css/Skills.css';
 
 class App extends Component {
   render() {
@@ -30,6 +31,9 @@ class App extends Component {
             <Route path="/projects" element={ <Projects /> } />
             <Route path="/contact" element={ <Contact /> } />
           </Routes>
+        </div>
+        <div>
+          <Footer />
         </div>
       </BrowserRouter>
     );
