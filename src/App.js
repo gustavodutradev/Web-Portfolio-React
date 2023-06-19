@@ -13,7 +13,6 @@ import Projects from './pages/Projects/Projects';
 // Style imports
 import './App.css';
 import './css/Loading.css';
-import './css/Skills.css';
 
 class App extends Component {
   render() {
