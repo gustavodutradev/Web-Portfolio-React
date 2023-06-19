@@ -14,11 +14,14 @@ const SSkills = styled.section`
     filter: drop-shadow(3px 3px 3px #1f1f1f);
     padding: 1rem;
   }
+  img:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+  }
 
   @media (max-width: 480px) {
     img {
       max-width: 70px;
-      filter: drop-shadow(3px 3px 3px #1f1f1f);
     }
   }
 `;
