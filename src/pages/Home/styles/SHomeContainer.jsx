@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import testeBG from '../../../data/skillsImages/bgteste.jpg';
 
 const SHomeContainer = styled.section`
   ${tw`
   flex
   flex-col
-  gap-6
+  gap-10
   justify-center
   items-center
   `}
+  max-width: 100vmax;
+  background: #1488cc;
+  background: -webkit-radial-gradient(circle, #1488cc 0%, #2b32b2 100%);
+  background: radial-gradient(circle, #1488cc 0%, #2b32b2 100%);
 
-  background-image: url(${testeBG});
-  background-size: cover;
-  background-position: center;
 `;
 
 export default SHomeContainer;
