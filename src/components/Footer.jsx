@@ -28,18 +28,30 @@ const SListItem = styled.li`
 `;
 
 const SDevelopedWith = styled.p`
-width: 100%;
+width: 100vw;
 margin: 0;
 position: relative;
 bottom: 0;
 display: flex;
 text-align: center;
-justify-content: space-around;
+justify-content: center;
 font-weight: bold;
 font-size: 9px;
 color: #121212;
-background-color: orange;
+background-color: white;
 padding: 0.2rem 0.5rem;
+`;
+
+const SInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+  font-size: 12px;
+  color: #fffa;
 `;
 
 function Footer() {
@@ -66,11 +78,10 @@ function Footer() {
                 height: '35px',
               } }
             />
-
           </a>
         </SListItem>
         <SListItem>
-          <a href="mailto:gustavo.dutra11@gmail.com">
+          <a href="mailto:gustavobdsdev@gmail.com">
             <FaEnvelope
               style={ {
                 color: '#fff',
@@ -81,6 +92,9 @@ function Footer() {
           </a>
         </SListItem>
       </SList>
+      <SInfo>
+        <span>+55(31)99227-8262 · gustavobdsdev@gmail.com</span>
+      </SInfo>
       <SDevelopedWith>
         Desenvolvido por Gustavo Dutra, utilizando React, Tailwind, Styled Components, Bootstrap, React Icons e muito carinho!
       </SDevelopedWith>
