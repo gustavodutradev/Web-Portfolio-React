@@ -27,11 +27,13 @@ function NavBar() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: '#006494',
+          background: '-webkit-radial-gradient(circle, #1488cc 0%, #2b32b2 100%)',
+          backdropFilter: 'blur(2px)',
+          padding: '10px',
           position: 'relative',
           zIndex: '1',
           top: '0',
-          width: '100%',
+          maxWidth: '100vmax',
         } }
       >
         <NavLink href="/">
