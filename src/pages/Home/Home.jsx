@@ -16,17 +16,15 @@ function Home() {
   return (
     <SHomeContainer>
       <SAbout>
+        <h1>
+          OI, EU SOU O GUSTAVO.
+        </h1>
         <p>
-          Olá, bem-vindo ao meu portfólio! Meu nome é Gustavo, tenho 30 anos e estou em transição de carreira.
-          Comecei minha carreira Engenharia Ambiental e Sanitária, porém decidi buscar novos desafios e algo que me fizesse feliz, e encontrei na programação uma nova paixão e também uma oportunidade de aplicar conhecimentos que adquiri na engenharia.
-        </p>
-        <p>
-          Atualmente estou capacitado para exercer a função de
-          desenvolvedora Full-Stack, após ter concluído o curso de Desenvolvimento Web na Trybe. Estou em busca de uma oportunidade de trabalho para colocar em prática os conhecimentos adquiridos e me tornar um profissional de tecnologia cada vez melhor e com aprendizado contínuo.
+          Tenho 30 anos, sou desenvolvedor Full-Stack com 1 ano de experiência estudando e trabalhando como freelancer.
         </p>
         <Button
           onClick={ () => navigate('/about') }
-          name="Saiba mais"
+          name="Saiba mais sobre mim"
         />
       </SAbout>
 
@@ -44,7 +42,7 @@ function Home() {
         <Carrousel />
         <Button
           onClick={ () => navigate('/projects') }
-          name="Saiba mais"
+          name="Veja todos os projetos"
         />
       </SProjects>
     </SHomeContainer>
