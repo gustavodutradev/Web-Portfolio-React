@@ -7,10 +7,14 @@ const SFooter = styled.footer`
     bottom: 0;
     left: 0;
     right: 0;
-    background: #121212;
+    background: #131313;
+    background: -webkit-linear-gradient(0deg, #131313 0%, #161616 100%);
+    background: linear-gradient(0deg, #131313 0%, #161616 100%);
     height: auto;
     width: 100vw;
     color: #fff;
+    outline: none;
+    border: none;
 `;
 
 const SList = styled.ul`
@@ -27,6 +31,21 @@ const SListItem = styled.li`
   padding: 10px;
 `;
 
+const SInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(0deg, #080808 0%, #131313 100%);
+  background: linear-gradient(0deg, #080808 0%, #131313 100%);
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  outline: none;
+`;
+
 const SDevelopedWith = styled.p`
 width: 100vw;
 margin: 0;
@@ -35,23 +54,11 @@ bottom: 0;
 display: flex;
 text-align: center;
 justify-content: center;
-font-weight: bold;
 font-size: 9px;
-color: #121212;
-background-color: white;
-padding: 0.2rem 0.5rem;
-`;
-
-const SInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #121212;
-  padding: 0.2rem 0.5rem;
-  font-weight: bold;
-  font-size: 12px;
-  color: #fffa;
+color: #fff;
+background: -webkit-linear-gradient(0deg, #020202 0%, #080808 100%);
+background: linear-gradient(0deg, #020202 0%, #080808 100%);
+padding: 0.5rem 0.8rem;
 `;
 
 function Footer() {
