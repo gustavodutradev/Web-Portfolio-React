@@ -35,6 +35,15 @@ const SAbout = styled.section`
   @media (max-width: 480px) {
     font-size: 1rem;
     max-width: 400px;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      text-align: justify;
+    }
   }
 `;
 
