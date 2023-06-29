@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 // Components Imports
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import NavBarSimple from './components/NavBarSimple';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
@@ -16,10 +17,14 @@ import './css/Loading.css';
 
 class App extends Component {
   render() {
+    const mobileWidth = 480;
+    console.log(window.screen.width);
+
     return (
       <BrowserRouter>
         <div>
-          <NavBar />
+          { window.screen.width < mobileWidth ? <NavBar /> : <NavBarSimple /> }
+
         </div>
         <div className="page-body">
           <Routes>
