@@ -27,7 +27,7 @@ function NavBar() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          background: '-webkit-radial-gradient(circle, #1488cc 0%, #2b32b2 100%)',
+          background: '-webkit-linear-gradient(90deg, #1488cc 0%, #00a2ff 100%)',
           backdropFilter: 'blur(2px)',
           padding: '10px',
           position: 'relative',
