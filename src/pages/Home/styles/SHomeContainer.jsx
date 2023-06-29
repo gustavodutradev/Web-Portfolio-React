@@ -10,10 +10,9 @@ const SHomeContainer = styled.section`
   items-center
   `}
   max-width: 100vmax;
-  background: #1488cc;
-  background: -webkit-radial-gradient(circle, #1488cc 0%, #2b32b2 100%);
-  background: radial-gradient(circle, #1488cc 0%, #2b32b2 100%);
-
+  background: #161616;
+  background: -webkit-linear-gradient(0deg, #161616 0%, #1488cc 100%);
+  background: linear-gradient(0deg, #161616 0%, #1488cc 100%);
 `;
 
 export default SHomeContainer;
