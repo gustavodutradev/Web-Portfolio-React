@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import projectsBG from '../../../data/skillsImages/projectsBG.jpg';
 
 const SProjectsContainer = styled.section`
     width: 100%;
@@ -9,11 +8,9 @@ const SProjectsContainer = styled.section`
     justify-content: flex-start;
     gap: 2rem;
     padding: 2.5rem;
-    background-image: url(${projectsBG});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: #161616;
+    background: -webkit-linear-gradient(0deg, #161616 0%, #1488cc 100%);
+    background: linear-gradient(0deg, #161616 0%, #1488cc 100%);
 `;
 
 export default SProjectsContainer;
