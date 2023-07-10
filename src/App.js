@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import NavBarSimple from './components/NavBarSimple';
 import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 
@@ -33,7 +32,6 @@ class App extends Component {
             <Route path="/home" element={ <Home /> } />
             <Route path="/about" element={ <About /> } />
             <Route path="/projects" element={ <Projects /> } />
-            <Route path="/contact" element={ <Contact /> } />
           </Routes>
         </div>
         <div>
