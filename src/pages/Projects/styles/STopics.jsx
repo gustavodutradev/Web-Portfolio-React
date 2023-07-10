@@ -15,7 +15,26 @@ const Topics = styled.span`
     &:hover {
         background-color: #006494;
         color: orange;
+        animation: pulse 2s infinite;
+        transform: scale(1);
     }
+
+  @keyframes pulse {
+0% {
+transform: scale(0.95);
+box-shadow: 0 0 0 0 #006494;
+}
+
+70% {
+transform: scale(1);
+box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+}
+
+100% {
+transform: scale(0.95);
+box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+}
 
     @media (max-width: 480px) {
     font-size: 0.8rem;
