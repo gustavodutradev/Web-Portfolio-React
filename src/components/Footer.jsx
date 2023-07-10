@@ -63,7 +63,9 @@ padding: 0.5rem 0.8rem;
 
 function Footer() {
   return (
-    <SFooter>
+    <SFooter
+      id="footer"
+    >
       <SList>
         <SListItem>
           <a href="https://www.linkedin.com/in/gustavodutradev/" target="_blank" rel="noreferrer">
