@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-max-depth */
 import React, { useState } from 'react';
-import { FaCode } from 'react-icons/fa';
+import { FaCode, FaDownload } from 'react-icons/fa';
 import { FcAbout, FcContacts, FcHome } from 'react-icons/fc';
 import {
   Collapse,
@@ -10,9 +10,10 @@ import {
   Navbar,
   NavbarToggler,
 } from 'reactstrap';
+import curriculo from '../data/curriculo.pdf';
 import BigHeads from './BigHeads';
 
-function NavBar() {
+function SandwichNav() {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleNavbar = () => setCollapsed(!collapsed);
@@ -27,11 +28,13 @@ function NavBar() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: '#006494',
+          background: '-webkit-linear-gradient(90deg, #1488cc 0%, #00a2ff 100%)',
+          backdropFilter: 'blur(2px)',
+          padding: '10px',
           position: 'relative',
           zIndex: '1',
           top: '0',
-          width: '100%',
+          maxWidth: '100vmax',
         } }
       >
         <NavLink href="/">
@@ -84,7 +87,7 @@ function NavBar() {
                 } }
               >
                 <FcAbout />
-                About
+                Sobre
               </NavLink>
             </NavItem>
             <NavItem>
@@ -105,12 +108,12 @@ function NavBar() {
                     color: '#42C920',
                   } }
                 />
-                Projects
+                Projetos
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                href="/contact"
+                href="#footer"
                 style={ {
                   color: 'orange',
                   fontSize: '1rem',
@@ -122,7 +125,26 @@ function NavBar() {
                 } }
               >
                 <FcContacts />
-                Contact
+                Contato
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href={ curriculo }
+                style={ {
+                  color: 'orange',
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  display: 'flex',
+                  gap: '10px',
+                } }
+                download="Gustavo-Barros-Dutra-Santos-CV"
+                target="_blank"
+              >
+                <FaDownload />
+                Currículo
               </NavLink>
             </NavItem>
           </Nav>
@@ -132,4 +154,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default SandwichNav;

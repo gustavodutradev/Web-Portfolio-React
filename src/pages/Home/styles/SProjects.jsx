@@ -1,15 +1,12 @@
 import styled from 'styled-components';
-import tw from 'twin.macro';
 
-const SProjects = styled.section`
-  ${tw`
-  flex
-  flex-col
-  justify-center
-  items-center
-  `}
-  padding: 20px;
-  gap: 2rem;
+const SProjectsContainer = styled.section`
+  display: flex;
+  max-width: 90vw;
+  height: auto;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+
 `;
 
-export default SProjects;
+export default SProjectsContainer;

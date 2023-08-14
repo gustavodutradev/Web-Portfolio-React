@@ -3,24 +3,27 @@ import React, { Component } from 'react';
 // Logic imports
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 // Components Imports
+import DefaultNav from './components/DefaultNav';
 import Footer from './components/Footer';
-import NavBar from './components/NavBar';
+import SandwichNav from './components/SandwichNav';
 import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 
 // Style imports
 import './App.css';
 import './css/Loading.css';
-import './css/Skills.css';
 
 class App extends Component {
   render() {
+    const mobileWidth = 480;
+    console.log(window.screen.width);
+
     return (
       <BrowserRouter>
         <div>
-          <NavBar />
+          { window.screen.width < mobileWidth ? <SandwichNav /> : <DefaultNav /> }
+
         </div>
         <div className="page-body">
           <Routes>
@@ -29,7 +32,6 @@ class App extends Component {
             <Route path="/home" element={ <Home /> } />
             <Route path="/about" element={ <About /> } />
             <Route path="/projects" element={ <Projects /> } />
-            <Route path="/contact" element={ <Contact /> } />
           </Routes>
         </div>
         <div>

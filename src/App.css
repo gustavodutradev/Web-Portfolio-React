@@ -7,11 +7,15 @@
   font-family: monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   overflow-x: hidden;
   width: 100%;
-  background-color: #f9f9f9;
+  background-color: #fff;
   background-size: cover;
   background-position: center;
 }

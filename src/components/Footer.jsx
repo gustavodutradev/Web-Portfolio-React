@@ -1,16 +1,21 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaRegFilePdf } from 'react-icons/fa';
 import styled from 'styled-components';
+import curriculo from '../data/curriculo.pdf';
 
 const SFooter = styled.footer`
     bottom: 0;
     left: 0;
     right: 0;
-    background: #121212;
+    background: #131313;
+    background: -webkit-linear-gradient(0deg, #131313 0%, #161616 100%);
+    background: linear-gradient(0deg, #131313 0%, #161616 100%);
     height: auto;
     width: 100vw;
     color: #fff;
+    outline: none;
+    border: none;
 `;
 
 const SList = styled.ul`
@@ -27,24 +32,41 @@ const SListItem = styled.li`
   padding: 10px;
 `;
 
+const SInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(0deg, #080808 0%, #131313 100%);
+  background: linear-gradient(0deg, #080808 0%, #131313 100%);
+  padding: 0.5rem 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  outline: none;
+`;
+
 const SDevelopedWith = styled.p`
-width: 100%;
+width: 100vw;
 margin: 0;
 position: relative;
 bottom: 0;
 display: flex;
 text-align: center;
-justify-content: space-around;
-font-weight: bold;
+justify-content: center;
 font-size: 9px;
-color: #121212;
-background-color: orange;
-padding: 0.2rem 0.5rem;
+color: #fff;
+background: -webkit-linear-gradient(0deg, #020202 0%, #080808 100%);
+background: linear-gradient(0deg, #020202 0%, #080808 100%);
+padding: 0.5rem 0.8rem;
 `;
 
 function Footer() {
   return (
-    <SFooter>
+    <SFooter
+      id="footer"
+    >
       <SList>
         <SListItem>
           <a href="https://www.linkedin.com/in/gustavodutradev/" target="_blank" rel="noreferrer">
@@ -66,11 +88,10 @@ function Footer() {
                 height: '35px',
               } }
             />
-
           </a>
         </SListItem>
         <SListItem>
-          <a href="mailto:gustavo.dutra11@gmail.com">
+          <a href="mailto:gustavobdsdev@gmail.com">
             <FaEnvelope
               style={ {
                 color: '#fff',
@@ -80,7 +101,26 @@ function Footer() {
             />
           </a>
         </SListItem>
+        <SListItem>
+          <a
+            href={ curriculo }
+            download="Gustavo-Barros-Dutra-Santos-CV"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaRegFilePdf
+              style={ {
+                color: '#ff0000',
+                width: '35px',
+                height: '35px',
+              } }
+            />
+          </a>
+        </SListItem>
       </SList>
+      <SInfo>
+        <span>+55(31)99227-8262 · gustavobdsdev@gmail.com</span>
+      </SInfo>
       <SDevelopedWith>
         Desenvolvido por Gustavo Dutra, utilizando React, Tailwind, Styled Components, Bootstrap, React Icons e muito carinho!
       </SDevelopedWith>
