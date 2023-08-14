@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaRegFilePdf } from 'react-icons/fa';
 import styled from 'styled-components';
+import curriculo from '../data/curriculo.pdf';
 
 const SFooter = styled.footer`
     bottom: 0;
@@ -94,6 +95,22 @@ function Footer() {
             <FaEnvelope
               style={ {
                 color: '#fff',
+                width: '35px',
+                height: '35px',
+              } }
+            />
+          </a>
+        </SListItem>
+        <SListItem>
+          <a
+            href={ curriculo }
+            download="Gustavo-Barros-Dutra-Santos-CV"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaRegFilePdf
+              style={ {
+                color: '#ff0000',
                 width: '35px',
                 height: '35px',
               } }

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-max-depth */
 import React, { useState } from 'react';
-import { FaCode } from 'react-icons/fa';
+import { FaCode, FaDownload } from 'react-icons/fa';
 import { FcAbout, FcContacts, FcHome } from 'react-icons/fc';
 import {
   Collapse,
@@ -10,6 +10,7 @@ import {
   Navbar,
   NavbarToggler,
 } from 'reactstrap';
+import curriculo from '../data/curriculo.pdf';
 import BigHeads from './BigHeads';
 
 function SandwichNav() {
@@ -125,6 +126,25 @@ function SandwichNav() {
               >
                 <FcContacts />
                 Contato
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                href={ curriculo }
+                style={ {
+                  color: 'orange',
+                  fontSize: '1rem',
+                  fontWeight: 'bold',
+                  alignContent: 'center',
+                  alignItems: 'center',
+                  display: 'flex',
+                  gap: '10px',
+                } }
+                download="Gustavo-Barros-Dutra-Santos-CV"
+                target="_blank"
+              >
+                <FaDownload />
+                Currículo
               </NavLink>
             </NavItem>
           </Nav>

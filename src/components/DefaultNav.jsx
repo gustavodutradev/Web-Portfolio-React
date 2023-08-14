@@ -1,7 +1,9 @@
 import React from 'react';
+import { FaDownload } from 'react-icons/fa';
 import { NavLink } from 'reactstrap';
 import styled from 'styled-components';
 import tw from 'twin.macro';
+import curriculo from '../data/curriculo.pdf';
 import BigHeads from './BigHeads';
 
 function defaultNav() {
@@ -71,6 +73,24 @@ function defaultNav() {
         } }
       >
         Contato
+      </NavLink>
+      <NavLink
+        href={ curriculo }
+        style={ {
+          color: '#f09819',
+          fontSize: '1.5rem',
+          fontWeight: 'bold',
+          alignContent: 'center',
+          alignItems: 'center',
+          display: 'flex',
+          gap: '10px',
+          textShadow: textShadowCfg,
+        } }
+        download="Gustavo-Barros-Dutra-Santos-CV"
+        target="_blank"
+      >
+        <FaDownload />
+        Currículo
       </NavLink>
     </SNav>
   );
