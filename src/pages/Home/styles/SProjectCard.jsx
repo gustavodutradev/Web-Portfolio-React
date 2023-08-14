@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 const SProjectCard = styled.div`
-@media (max-width: 480px) {
 ${tw`
 flex
 flex-col
@@ -17,7 +16,7 @@ to-amber-600
 
 max-width: 20rem;
 max-height: auto;
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.533);
 scroll-snap-align: center;
 scroll-snap-stop: always;
 
@@ -46,6 +45,15 @@ p {
     text-align: center;
 }
 
+a {
+    ${tw`
+    text-sm
+    font-bold
+    `}
+    display: flex;
+    text-decoration: none;
+    color: #3131b8;
+    cursor: pointer;
 }
 
 `;
