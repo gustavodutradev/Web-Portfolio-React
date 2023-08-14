@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 // Logic imports
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 // Components Imports
+import DefaultNav from './components/DefaultNav';
 import Footer from './components/Footer';
-import NavBar from './components/NavBar';
-import NavBarSimple from './components/NavBarSimple';
+import SandwichNav from './components/SandwichNav';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          { window.screen.width < mobileWidth ? <NavBar /> : <NavBarSimple /> }
+          { window.screen.width < mobileWidth ? <SandwichNav /> : <DefaultNav /> }
 
         </div>
         <div className="page-body">
