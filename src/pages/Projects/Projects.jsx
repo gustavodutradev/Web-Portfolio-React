@@ -49,7 +49,7 @@ function Projects() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Visite o repositório!
+                Visite o repositório!!
               </SLink>
             </SCard>
           );
