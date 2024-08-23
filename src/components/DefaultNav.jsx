@@ -3,7 +3,7 @@ import { FaDownload } from 'react-icons/fa';
 import { NavLink } from 'reactstrap';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import curriculo from '../data/curriculo.pdf';
+import curriculo from '../data/curriculo_atualizado_08_24.pdf';
 import BigHeads from './BigHeads';
 
 function defaultNav() {
@@ -12,14 +12,17 @@ function defaultNav() {
     flex
     justify-around
     items-center
-    relative
+    fixed
     z-10
     top-0
+    mt-0.5
     `}
     background: -webkit-linear-gradient(90deg, #1488cc 0%, #00a2ff 100%);
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(200px);
     padding: 10px;
+    width: 100%;
     max-width: 100vmax;
+    opacity: 0.75;
 `;
 
   const textShadowCfg = '2px 1px 2px #121212ad';
@@ -86,7 +89,7 @@ function defaultNav() {
           gap: '10px',
           textShadow: textShadowCfg,
         } }
-        download="Gustavo-Barros-Dutra-Santos-CV"
+        download="Curriculo - Gustavo Barros Dutra Santos"
         target="_blank"
       >
         <FaDownload />

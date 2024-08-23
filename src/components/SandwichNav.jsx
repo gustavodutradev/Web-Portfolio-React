@@ -10,7 +10,7 @@ import {
   Navbar,
   NavbarToggler,
 } from 'reactstrap';
-import curriculo from '../data/curriculo.pdf';
+import curriculo from '../data/curriculo_atualizado_08_24.pdf';
 import BigHeads from './BigHeads';
 
 function SandwichNav() {
@@ -31,10 +31,13 @@ function SandwichNav() {
           background: '-webkit-linear-gradient(90deg, #1488cc 0%, #00a2ff 100%)',
           backdropFilter: 'blur(2px)',
           padding: '10px',
-          position: 'relative',
+          position: 'fixed',
           zIndex: '1',
           top: '0',
+          width: '100%',
           maxWidth: '100vmax',
+          opacity: '0.75',
+          marginTop: '0.2rem',
         } }
       >
         <NavLink href="/">
