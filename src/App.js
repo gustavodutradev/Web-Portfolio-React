@@ -17,7 +17,6 @@ import './css/Loading.css';
 class App extends Component {
   render() {
     const mobileWidth = 480;
-    console.log(window.screen.width);
 
     return (
       <BrowserRouter>

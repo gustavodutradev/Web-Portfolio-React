@@ -22,7 +22,6 @@ function Projects() {
   const getReposResponse = async () => {
     setLoading(true);
     const repos = await getMyReposFromGithub();
-    console.log(repos);
     setReposList(repos);
     setLoading(false);
   };

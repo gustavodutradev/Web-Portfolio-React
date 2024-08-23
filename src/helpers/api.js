@@ -3,7 +3,6 @@ const getMyReposFromGithub = async () => {
     const URL = 'https://api.github.com/users/gustavodutradev/repos';
     const request = await fetch(URL);
     const result = await request.json();
-    console.log(result);
     return result;
   } catch (error) {
     console.log(error, 'Failed to request repos');
