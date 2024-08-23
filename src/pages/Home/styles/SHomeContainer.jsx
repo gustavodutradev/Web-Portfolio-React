@@ -13,6 +13,7 @@ const SHomeContainer = styled.section`
   background: #161616;
   background: -webkit-linear-gradient(0deg, #161616 0%, #1488cc 100%);
   background: linear-gradient(0deg, #161616 0%, #1488cc 100%);
+  padding-top: 5rem;
 `;
 
 export default SHomeContainer;
