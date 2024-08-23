@@ -24,7 +24,7 @@ function Home() {
           OI, EU SOU O GUSTAVO.
         </h1>
         <p>
-          Tenho 30 anos, sou desenvolvedor Full-Stack com 1 ano de experiência estudando e trabalhando como freelancer.
+          Tenho 31 anos, sou desenvolvedor Full-Stack com 2 anos de experiência estudando e trabalhando como freelancer.
         </p>
         <Button
           onClick={ () => navigate('/about') }
