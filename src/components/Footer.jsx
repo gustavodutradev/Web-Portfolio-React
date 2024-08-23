@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaRegFilePdf } from 'react-icons/fa';
 import styled from 'styled-components';
-import curriculo from '../data/curriculo.pdf';
+import curriculo from '../data/curriculo_atualizado_08_24.pdf';
 
 const SFooter = styled.footer`
     bottom: 0;
@@ -16,6 +16,7 @@ const SFooter = styled.footer`
     color: #fff;
     outline: none;
     border: none;
+    padding-top: 5rem;
 `;
 
 const SList = styled.ul`
@@ -80,7 +81,7 @@ function Footer() {
           </a>
         </SListItem>
         <SListItem>
-          <a href="https://github.com/Gustavo-trybedev" target="_blank" rel="noreferrer">
+          <a href="https://github.com/gustavodutradev" target="_blank" rel="noreferrer">
             <FaGithub
               style={ {
                 color: '#fff',
@@ -104,7 +105,7 @@ function Footer() {
         <SListItem>
           <a
             href={ curriculo }
-            download="Gustavo-Barros-Dutra-Santos-CV"
+            download="Curriculo - Gustavo Barros Dutra Santos"
             target="_blank"
             rel="noreferrer"
           >
