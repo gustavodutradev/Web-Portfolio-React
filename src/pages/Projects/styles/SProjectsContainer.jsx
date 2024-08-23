@@ -7,7 +7,7 @@ const SProjectsContainer = styled.section`
     flex-direction: column;
     justify-content: flex-start;
     gap: 2rem;
-    padding: 2.5rem;
+    padding: 6rem 2rem 2rem 2rem;
     background: #161616;
     background: -webkit-linear-gradient(0deg, #161616 0%, #1488cc 100%);
     background: linear-gradient(0deg, #161616 0%, #1488cc 100%);
