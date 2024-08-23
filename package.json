@@ -1,7 +1,6 @@
 {
   "name": "web-portfolio",
   "version": "0.1.0",
-  "homepage": "https://Gustavo-trybedev.github.io/Web-Portfolio-React",
   "private": true,
   "dependencies": {
     "@bigheads/core": "^0.3.3",
