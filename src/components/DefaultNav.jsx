@@ -15,10 +15,8 @@ function defaultNav() {
     fixed
     z-10
     top-0
-    mt-0.5
     `}
-    background: -webkit-linear-gradient(90deg, #1488cc 0%, #00a2ff 100%);
-    // backdrop-filter: blur(200px);
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 10px;
     width: 100%;
     max-width: 100vmax;
