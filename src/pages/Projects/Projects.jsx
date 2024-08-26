@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 // components
+import FilterBar from '../../components/FilterBar';
 import Loading from '../../components/Loading';
 
 // api
@@ -18,11 +19,21 @@ import STopicsContainer from './styles/STopicsContainer';
 function Projects() {
   const [loading, setLoading] = useState(false);
   const [reposList, setReposList] = useState([]);
+  const [filteredRepos, setFilteredRepos] = useState([]);
+  const [repoTopics, setRepoTopics] = useState([]);
 
   const getReposResponse = async () => {
     setLoading(true);
     const repos = await getMyReposFromGithub();
     setReposList(repos);
+    setFilteredRepos(repos);
+
+    const allTopics = new Set();
+    repos.forEach((repo) => {
+      repo.topics.forEach((topic) => allTopics.add(topic));
+    });
+    setRepoTopics([...allTopics]);
+
     setLoading(false);
   };
 
@@ -30,29 +41,50 @@ function Projects() {
     getReposResponse();
   }, []);
 
+  const handleFilterChange = (selectedTopic) => {
+    if (selectedTopic === '') {
+      setFilteredRepos(reposList);
+    } else {
+      const filtered = reposList.filter((repo) => repo.topics.includes(selectedTopic));
+      setFilteredRepos(filtered);
+    }
+  };
+
+  const orderTopics = (topics) => topics.sort((a, b) => {
+    const lowerToUper = -1;
+    const upperToLower = 1;
+    if (a < b) return lowerToUper;
+    if (a > b) return upperToLower;
+    return 0;
+  });
+
   return (
     <SProjectsContainer>
-      { loading ? (<Loading />
+      <FilterBar
+        topics={ orderTopics(repoTopics) }
+        onFilterChange={ handleFilterChange }
+      />
+      {loading ? (
+        <Loading />
       ) : (
-        reposList.map((repo) => {
+        filteredRepos.map((repo) => {
           const { name, description, html_url, id, topics } = repo;
           return (
             <SCard key={ id }>
               <h1>{name}</h1>
               <p>{description}</p>
               <STopicsContainer>
-                {topics.map((topic) => <Topics key={ topic }>{topic}</Topics>)}
+                {topics.map((topic) => (
+                  <Topics key={ topic }>{ topic }</Topics>
+                ))}
               </STopicsContainer>
-              <SLink
-                href={ html_url }
-                target="_blank"
-                rel="noreferrer"
-              >
+              <SLink href={ html_url } target="_blank" rel="noreferrer">
                 Visite o repositório!!
               </SLink>
             </SCard>
           );
-        }))}
+        })
+      )}
     </SProjectsContainer>
   );
 }
