@@ -28,7 +28,8 @@ function SandwichNav() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          background: '-webkit-linear-gradient(90deg, #1488cc 0%, #00a2ff 100%)',
+          // eslint-disable-next-line no-magic-numbers
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
           backdropFilter: 'blur(2px)',
           padding: '10px',
           position: 'fixed',
@@ -37,19 +38,25 @@ function SandwichNav() {
           width: '100%',
           maxWidth: '100vmax',
           opacity: '0.75',
-          marginTop: '0.2rem',
         } }
       >
         <NavLink href="/">
           <BigHeads />
         </NavLink>
 
-        <NavbarToggler onClick={ toggleNavbar } className="me-2" />
+        <NavbarToggler
+          onClick={ toggleNavbar }
+          className="me-2"
+          style={ {
+            backgroundColor: '#f09819',
+            border: '2.5px solid black',
+          } }
+        />
         <Collapse
           isOpen={ !collapsed }
           navbar
           style={ {
-            backgroundColor: '#006494',
+            backgroundColor: 'rgba(0, 0, 0, 1)',
             borderRadius: '5px',
             padding: '10px',
             marginTop: '1rem',
